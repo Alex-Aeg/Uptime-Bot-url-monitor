@@ -8,11 +8,11 @@ dotenv.config({ path: './config.env' });
 
 //nodemail
 var transporter = nodemailer.createTransport({
- host: 'smtp.ethereal.email',
+ host: 'mail.your-server.de',
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: account.user, // generated ethereal user
+            user: 'notifications@aegialis.gr', // generated ethereal user
             pass: account.pass  // generated ethereal password
         }
     });
