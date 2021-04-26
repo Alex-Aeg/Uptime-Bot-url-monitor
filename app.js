@@ -8,7 +8,7 @@ dotenv.config({ path: './config.env' });
 
 //nodemail
 var transporter = nodemailer.createTransport({
- host: 'mail.your-server.de',
+ host: process.env.EMAIL_HOST,
         port: 587,
         secure: true, // true for 465, false for other ports
         auth: {
