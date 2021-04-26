@@ -3,7 +3,7 @@
 
 # Web url uptime monitor for node.js
 
-Sents an notification when web url is down.
+Sends an notification when web url is down.
 
 Uses: https://github.com/j8la/url-monitor 
 & Nodemailer
