@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Alex-Aeg/Node-webmonitor/issues"
   },
-  "homepage": "https://github.com/Alex-Aeg/Node-webmonitor#readme"
+  "homepage": "https://github.com/Alex-Aeg/Node-webmonitor#readme",
+  "dependencies": {
+    "url-monitor": "^1.3.3"
+  }
 }
