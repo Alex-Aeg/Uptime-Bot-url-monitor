@@ -12,13 +12,13 @@ var transporter = nodemailer.createTransport({
         port: 587,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'upnotifications@aegialis.gr', // generated ethereal user
-            pass: '3x412RwPhsZlVsbQ'  // generated ethereal password
+            user: process.env.EMAIL_USER, // generated ethereal user
+            pass: process.env.EMAIL_PASS  // generated ethereal password
         }
     });
 
 var mailOptions = {
-  from: 'upnotifications@aegialis.gr',
+  from: EMAIL_USER,
   to: 'myfriend@yahoo.com',
   subject: 'Sending Email using Node.js',
   text: 'That was easy!'
