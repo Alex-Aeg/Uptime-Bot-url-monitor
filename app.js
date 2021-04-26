@@ -10,15 +10,15 @@ dotenv.config({ path: './config.env' });
 var transporter = nodemailer.createTransport({
  host: 'mail.your-server.de',
         port: 587,
-        secure: false, // true for 465, false for other ports
+        secure: true, // true for 465, false for other ports
         auth: {
-            user: 'notifications@aegialis.gr', // generated ethereal user
-            pass: account.pass  // generated ethereal password
+            user: 'upnotifications@aegialis.gr', // generated ethereal user
+            pass: '3x412RwPhsZlVsbQ'  // generated ethereal password
         }
     });
 
 var mailOptions = {
-  from: 'youremail@gmail.com',
+  from: 'upnotifications@aegialis.gr',
   to: 'myfriend@yahoo.com',
   subject: 'Sending Email using Node.js',
   text: 'That was easy!'
