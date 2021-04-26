@@ -17,9 +17,10 @@ var transporter = nodemailer.createTransport({
         }
     });
 
+    const mailerlist = 'it@aegialsi.com'
 var mailOptions = {
-  from: EMAIL_USER,
-  to: 'myfriend@yahoo.com',
+  from: process.env.EMAIL_USER,
+  to: mailerlist,
   subject: 'Sending Email using Node.js',
   text: 'That was easy!'
 };
