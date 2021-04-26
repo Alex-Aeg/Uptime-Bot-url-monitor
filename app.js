@@ -1,7 +1,9 @@
 const urlmon = require('url-monitor');
-
 var nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
 
+
+dotenv.config({ path: './config.env' });
 var transporter = nodemailer.createTransport({
  host: 'smtp.ethereal.email',
         port: 587,
