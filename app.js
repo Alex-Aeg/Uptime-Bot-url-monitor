@@ -1,5 +1,4 @@
 const urlmon = require('url-monitor');
-const dotenv = require('dotenv');
 
 const website = new urlmon({
 	url:'https://amorgos-aegialis.com/9847298579482759043705702934', 
