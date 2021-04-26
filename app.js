@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
 
+
 //nodemail
 var transporter = nodemailer.createTransport({
  host: process.env.EMAIL_HOST,
@@ -43,8 +44,10 @@ website.on('unavailable', (data) => {
 transporter.sendMail({
   from: process.env.EMAIL_USER,
   to: mailerlist,
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
+  subject: `404 for ${data.url}`,
+  text: `It seems the url:
+  ${data.url} 
+  has a 404 status`
 }, function(error, info){
   if (error) {
     console.log(error);
