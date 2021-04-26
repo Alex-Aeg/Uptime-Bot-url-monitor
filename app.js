@@ -1,5 +1,31 @@
 const urlmon = require('url-monitor');
 
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'youremail@gmail.com',
+    pass: 'yourpassword'
+  }
+});
+
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
 const website = new urlmon({
 	url:'https://amorgos-aegialis.com/9847298579482759043705702934', 
 	interval: 5000,
