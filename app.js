@@ -1,12 +1,14 @@
-var urlmon = require('url-monitor');
+const urlmon = require('url-monitor');
+const dotenv = require('dotenv');
 
-var website = new urlmon({
+const website = new urlmon({
 	url:'https://amorgos-aegialis.com/9847298579482759043705702934', 
 	interval: 500,
 	timeout: 300
 });
 
 website.on('error', (data) => {
+    website.stop();
 	console.log(data);
 })
 
