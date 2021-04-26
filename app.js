@@ -23,7 +23,7 @@ var transporter = nodemailer.createTransport({
 
 
 const website = new urlmon({
-	url:'https://amorgos-aegialis.com/9847298579482759043705702934', 
+	url:process.env.URL, 
 	interval: 5000,
 	timeout: 3000
 });
