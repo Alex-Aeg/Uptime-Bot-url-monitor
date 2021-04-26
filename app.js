@@ -17,21 +17,8 @@ var transporter = nodemailer.createTransport({
         }
     });
 
-    const mailerlist = 'it@aegialis.com'
-var mailOptions = {
-  from: process.env.EMAIL_USER,
-  to: mailerlist,
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
+    const mailerlist = process.env.EMAIL_LIST
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
 
 
 const website = new urlmon({
@@ -51,7 +38,20 @@ website.on('available', (data) => {
 
 website.on('unavailable', (data) => {
 	console.log(data);
-	//website.stop();
+    //website.stop();
+
+transporter.sendMail({
+  from: process.env.EMAIL_USER,
+  to: mailerlist,
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+}, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 })
 
 website.start();
