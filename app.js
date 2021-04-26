@@ -9,7 +9,7 @@ dotenv.config({ path: './config.env' });
 //nodemail
 var transporter = nodemailer.createTransport({
  host: process.env.EMAIL_HOST,
-        port: 587,
+        port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
             user: process.env.EMAIL_USER, // generated ethereal user
@@ -17,7 +17,7 @@ var transporter = nodemailer.createTransport({
         }
     });
 
-    const mailerlist = 'it@aegialsi.com'
+    const mailerlist = 'it@aegialis.com'
 var mailOptions = {
   from: process.env.EMAIL_USER,
   to: mailerlist,
