@@ -1,0 +1,19 @@
+{
+  "name": "node-webmonitor",
+  "version": "1.0.0",
+  "description": "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Alex-Aeg/Node-webmonitor)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Aeg/Node-webmonitor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Aeg/Node-webmonitor/issues"
+  },
+  "homepage": "https://github.com/Alex-Aeg/Node-webmonitor#readme"
+}
