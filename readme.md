@@ -1,9 +1,7 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Alex-Aeg/Node-webmonitor)
+# Uptime Bot
 
+## Simple url monitoring with email, SMS and webhook notification
 
-# Web url uptime monitor for node.js
+[Runs on Node.js](#)
 
-Sends an notification when web url is down.
-
-Uses: https://github.com/j8la/url-monitor 
-& Nodemailer
+Uses [Url-monitor](https://github.com/j8la/url-monitor), Nodemailer and friends.
